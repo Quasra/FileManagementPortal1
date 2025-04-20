@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Berkay\\Desktop\\\u00DCnii\\Abdlkadir hoca 24-25 bahar d\u00F6nemi\\FileManagementPortal1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F17B713-4E13-4CC1-81E7-EE566CED42FA}|FileManagementPortal1.csproj|c:\\users\\berkay\\desktop\\\u00FCnii\\abdlkadir hoca 24-25 bahar d\u00F6nemi\\filemanagementportal1\\filemanagementportal1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1F17B713-4E13-4CC1-81E7-EE566CED42FA}|FileManagementPortal1.csproj|solutionrelative:filemanagementportal1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileManagementPortal1",
+              "DocumentMoniker": "C:\\Users\\Berkay\\Desktop\\\u00DCnii\\Abdlkadir hoca 24-25 bahar d\u00F6nemi\\FileManagementPortal1\\FileManagementPortal1.csproj",
+              "RelativeDocumentMoniker": "FileManagementPortal1.csproj",
+              "ToolTip": "C:\\Users\\Berkay\\Desktop\\\u00DCnii\\Abdlkadir hoca 24-25 bahar d\u00F6nemi\\FileManagementPortal1\\FileManagementPortal1.csproj",
+              "RelativeToolTip": "FileManagementPortal1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-20T10:45:20.759Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
