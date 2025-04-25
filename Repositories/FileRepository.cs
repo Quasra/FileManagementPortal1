@@ -1,6 +1,7 @@
 ﻿using FileManagementPortal1.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -89,7 +90,21 @@ namespace FileManagementPortal1.Repositories
 
             return (fileBytes, file.ContentType, file.FileName);
         }
+        public async Task<bool> HardDeleteFileAsync(int id, string userId)
+        {
+            var file = await GetByIdAsync(id);
+            if (file == null || file.UserId != userId)
+                return false;
 
+            // Fiziksel dosyayı sil
+            if (System.IO.File.Exists(file.FilePath))
+            {
+                System.IO.File.Delete(file.FilePath);
+            }
+
+            // Veritabanından tamamen sil (hard delete)
+            return await DeleteAsync(id);
+        }
         public async Task<bool> DeleteFileAsync(int id, string userId)
         {
             var file = await GetByIdAsync(id);
@@ -103,7 +118,20 @@ namespace FileManagementPortal1.Repositories
             }
 
             // Dosya kaydını veritabanından silme (soft delete)
-            return await SoftDeleteAsync(id);
+             await DeleteAsync(id);
+            return true;
+        }
+
+
+
+        internal void Remove(FileModel file)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal async Task SaveChangesAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

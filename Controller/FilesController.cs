@@ -101,6 +101,7 @@ namespace FileManagementPortal1.Controllers
             return File(fileData.Item1, fileData.Item2, fileData.Item3);
         }
 
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFile(int id)
         {
@@ -108,7 +109,7 @@ namespace FileManagementPortal1.Controllers
             var file = await _fileRepository.GetByIdAsync(id);
 
             if (file == null)
-                return NotFound();
+                return NotFound(new { message = "Dosya bulunamadı." });
 
             if (file.UserId != userId && !User.IsInRole("Admin"))
                 return Forbid();
@@ -116,9 +117,15 @@ namespace FileManagementPortal1.Controllers
             var result = await _fileRepository.DeleteFileAsync(id, userId);
 
             if (!result)
-                return BadRequest("Failed to delete file");
+                return BadRequest(new { message = "Dosya silinirken bir hata oluştu." });
 
-            return NoContent();
+            return Ok(new { message = $"'{file.FileName}' adlı dosya başarıyla silindi." });
+        }
+
+
+        private IActionResult HandleError(Exception ex)
+        {
+            throw new NotImplementedException();
         }
     }
 }

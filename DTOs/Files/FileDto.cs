@@ -10,7 +10,6 @@ namespace FileManagementPortal1.DTOs.Files
         public long FileSize { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
-        public bool IsActive { get; set; }
         public string UserName { get; set; }
         public string FolderName { get; set; }
         public int? FolderId { get; set; }

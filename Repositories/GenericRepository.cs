@@ -98,16 +98,6 @@ namespace FileManagementPortal1.Repositories
             return true;
         }
 
-        public virtual async Task<bool> SoftDeleteAsync(int id)
-        {
-            var entity = await _dbSet.FindAsync(id);
-            if (entity == null)
-                return false;
-
-            entity.IsActive = false;
-            await _context.SaveChangesAsync();
-            return true;
-        }
 
         public virtual async Task<bool> ExistsAsync(int id)
         {

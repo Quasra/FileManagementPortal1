@@ -20,4 +20,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Uploads\4a59e11c-1ddb-42b3-97b1-e9ef71512679\" />
+    <Folder Include="Uploads\80c87484-4ba2-4380-8b80-013950828528\" />
+  </ItemGroup>
+
 </Project>

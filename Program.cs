@@ -97,6 +97,7 @@ builder.Services.AddAutoMapper(config => {
     config.CreateMap<AppUser, UserDto>();
     config.CreateMap<RegisterDto, AppUser>();
 
+
     // File mapping
     config.CreateMap<FileModel, FileDto>()
         .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.User != null ? src.User.UserName : null))
@@ -188,7 +189,7 @@ using (var scope = app.Services.CreateScope())
             }
         }
 
-        // Varsayýlan admin kullanýcýsýný oluþtur
+        
         var userManager = services.GetRequiredService<UserManager<AppUser>>();
         const string adminEmail = "admin@example.com";
         const string adminPassword = "Admin123!";

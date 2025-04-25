@@ -26,5 +26,10 @@ namespace FileManagementPortal1.Repositories
                 .Include(f => f.Files.Where(file => file.IsActive))
                 .FirstOrDefaultAsync(f => f.Id == id);
         }
+        public async Task DeleteAsync(Folder folder)
+        {
+            _context.Folders.Remove(folder);
+            await _context.SaveChangesAsync();
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace FileManagementPortal1.Models
                 .HasOne(f => f.Folder)
                 .WithMany(f => f.Files)
                 .HasForeignKey(f => f.FolderId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         // BaseEntity özelliklerini otomatik olarak güncelleyen SaveChanges override'ları
@@ -73,7 +73,7 @@ namespace FileManagementPortal1.Models
                 else if (entity.State == EntityState.Modified)
                 {
                     ((BaseEntity)entity.Entity).UpdatedDate = DateTime.UtcNow;
-                    ((BaseEntity)entity.Entity).UpdatedBy = currentUser;
+                   
 
                     // CreatedDate ve CreatedBy alanlarını değiştirmeyi engelle
                     entity.Property("CreatedDate").IsModified = false;

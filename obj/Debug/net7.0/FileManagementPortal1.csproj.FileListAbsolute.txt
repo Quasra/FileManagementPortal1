@@ -87,3 +87,4 @@ C:\Users\Berkay\Desktop\Ünii\Abdlkadir hoca 24-25 bahar dönemi\FileManagementP
 C:\Users\Berkay\Desktop\Ünii\Abdlkadir hoca 24-25 bahar dönemi\FileManagementPortal1\obj\Debug\net7.0\FileManagementPortal1.pdb
 C:\Users\Berkay\Desktop\Ünii\Abdlkadir hoca 24-25 bahar dönemi\FileManagementPortal1\obj\Debug\net7.0\FileManagementPortal1.genruntimeconfig.cache
 C:\Users\Berkay\Desktop\Ünii\Abdlkadir hoca 24-25 bahar dönemi\FileManagementPortal1\obj\Debug\net7.0\ref\FileManagementPortal1.dll
+C:\Users\Berkay\Desktop\Ünii\Abdlkadir hoca 24-25 bahar dönemi\FileManagementPortal1\obj\Debug\net7.0\FileManagementPortal1.sourcelink.json
